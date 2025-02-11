@@ -1,0 +1,20 @@
+<!-- <ion-card [ngStyle]="{'background-color': data.bgColor}">
+        <ion-card-title style="border-bottom: none; color: black; padding: 20px;">
+            <div style="font-size: 29px; font-weight: 600;">{{ data.value }}</div>
+            <div style="font-size: 22px; font-weight: 500;">{{ data.title }}</div>
+        </ion-card-title>
+</ion-card> -->
+
+<div [ngStyle]="{'background-color': data.bgColor}">
+    <ion-card >
+        <ion-card-header>
+            <ion-card-title style="border-bottom: none; color: black">
+                <div style="font-size: 29px; font-weight: 600;">{{ data.value }}</div>
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <div style="font-size: 22px; font-weight: 500;">{{ data.title }}</div>
+        </ion-card-content>
+           
+    </ion-card>  
+</div>

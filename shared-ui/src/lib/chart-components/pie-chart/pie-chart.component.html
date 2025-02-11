@@ -1,0 +1,11 @@
+<ion-card class="mb-5">
+    <ion-card-header>
+        <ion-card-title>
+            <h4>{{ data.title }}</h4>
+        </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <app-dropdown *ngIf="data.filter" [dropdownData]="data.dropdowns"></app-dropdown>
+        <div id="{{ data.widgetId }}" class="chart-container"></div>
+    </ion-card-content>
+</ion-card>

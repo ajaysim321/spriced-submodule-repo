@@ -1,1 +1,1 @@
-export * from './lib/platform-ui/platform-ui.component';
+export * from './lib/dashboard/dashboard.component';

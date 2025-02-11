@@ -1,0 +1,24 @@
+<ion-grid>
+  <ion-row>
+    <ion-col
+      *ngFor="let dropdown of dropdownData; let i = index"
+      size="12"
+      size-md="6"
+    >
+      <ion-item>
+        <ion-label>{{ dropdown.label }}</ion-label>
+        <ion-select
+          
+          [(ngModel)]="dropdown.selectedOption"
+        >
+          <ion-select-option
+            *ngFor="let option of dropdown.options"
+            [value]="option"
+          >
+            {{ option }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>

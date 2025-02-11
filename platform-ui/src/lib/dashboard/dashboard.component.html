@@ -1,0 +1,23 @@
+@if(charts){
+<ion-header class="mb-3">
+    <ion-toolbar>
+        <ion-title>{{ dashboardType }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+@for (item of charts; track $index) {
+<ion-grid [fixed]="true">
+    <ion-row class="mb-4">
+        <ion-col >
+            <h2>{{ item?.title }}</h2>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        @for (chart of item.blocks; track $index) {
+        <ion-col [attr.size]="chart.size" [attr.size-md]="chart.size_md" [attr.size-sm]="chart.size_sm" [attr.size-lg]="chart.colSize">
+            <app-widget-renderer [charts]="chart"></app-widget-renderer>
+        </ion-col>
+        }
+    </ion-row>
+</ion-grid>
+}
+}
